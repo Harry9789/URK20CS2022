@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    background-color: blueviolet;
+    border: 1px;
+    border: black;
+    display: flex;
+    width: auto;
+    height: 150px;
+}
+
+.head_logo {
+    border: 1px;
+
+    background-color: white;
+    align-items: right;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    font-size: 18px;
+
+}
+
+.head_text {
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons button {
+    background-color: aqua;
+    border: none;
+    color: black;
+    
+    padding: 10px 24px;
+    
+    cursor: pointer;
+    
+    float: left;
+    
+
+}
+
+.buttons button:not(:last-child) {
+    border-right: none;
+}
+
+.buttons:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.buttons button:hover {
+    background-color: #3e8e41;
+}
+
+.mid-image {
+    background-image: url("background.jpg");
+    
+    background-color: #cccccc;
+    
+    height: 200px;
+    
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+
+}
+
+.mid-table {
+    border: 1px dotted blue;
+    background-color: #a8daf0;
+    padding: 25px;
+    border-width: 7px;
+    width: 250px;
+    height: 136px;
+    margin: 1px 1px 1px 50px;
+}
+
+.back-bot {
+    background-image: url("back.jpg");
+    
+    background-color: #cccccc;
+    
+    height: 350px;
+    border-style: double;
+
+
+}
+
+.table2,
+td,
+th {
+    border: 1px;
+}
+
+.table2 {
+    width: 100%;
+
+}
+
+td {
+
+    text-align: center;
+    padding: 15px;
+}
+
+.font-table {
+    font-style: italic;
+    font-weight: bolder
+}
+
+.bottom {
+    background-color: #f0d3bb;
+    height: 70px;
+}
+
+
+.icon-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+/*.table_container{
+    justify-content: space-evenly;
+    padding: 50px 64px;
+    border-collapse: collapse;
+    width:100%
+}
+th{  
+    border: 2px solid rgb(0, 9, 128);  
+    padding: 15px;  
+    justify-content: space-evenly;
+}  
+*/
+.text{
+    position: relative;
+}
+.text h3{
+    border: 2px solid rgb(9, 64, 241);
+    padding: 10px 8px;
+    text-align: center;
+    width: 250px;
+    position: absolute;
+    left: 0px;
+    top: 142px;
+    color: black;
+    font-size: 30px;
+}
+.css h3{
+    width: 250px;
+}
+.js h3{
+    width: 250px;
+}
+.php h3{
+    width: 250px;
+}
