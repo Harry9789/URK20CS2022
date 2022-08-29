@@ -153,7 +153,8 @@ th{
     width: 250px;
     position: absolute;
     left: 0px;
-    top: 142px;
+    top: 71px;
+    bottom: 71px;
     color: black;
     font-size: 30px;
 }
