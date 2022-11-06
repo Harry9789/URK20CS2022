@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+        var app = angular.module('myapp', ['ngRoute']);
+        app.config(function ($routeProvider) {
+            $routeProvider.when('/home', {
+                templateUrl: 'color.html'
+            })
+                .when('/1001', {
+                    templateUrl:'REGIST1001.html'
+                })
+                .when('/1002',{
+                    templateUrl:'REGIST1002.html'
+                })
+                .when('/1003',{
+                    templateUrl:'REGIST1003.html'
+                })
+                .when('/1004',{
+                    templateUrl:'REGIST1004.html'
+                })
+                .otherwise({redirectTo:'/'})
+        })
+    </script>
+</head>
+
+<body ng-app="myapp">
+    <table cellspacing = 30 border = "0" width = "100%" style="background-color: white; color: aqua;">
+    <td><a href="REGIST1001.html">REGIST1001</a></td> 
+    <td><a href="REGIST1002.html">REGIST1002</a></td>
+    <td><a href="REGIST1003.html">REGIST1003</a></td>
+    <td><a href="REGIST1004.html">REGIST1004</a></td>
+    </table>
+    <hr>
+    <div ng-view>
+    </div>
+</body>
+</html>

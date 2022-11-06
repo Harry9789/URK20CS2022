@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+        <script>
+            var app = angular.module('registration',[]) 
+            app.controller('regcontroller', function($scope) 
+            { 
+                
+                
+            }); 
+        </script>
+        
+
+    </head>
+
+    <body ng-app="registration" style="color: blue;">
+        <form  ng-controller="regcontroller" name="regform"> 
+            <h1>CHRISTMAS MEGA PLAY REGISTRATION FORM</h1>
+            
+            <table>
+                <tr>
+                    <td style="width:35%"><label for="name">Name : </label><span style="color: red">*</span></td>
+                    <td><input type="text" ng-model="name" id="name" name="name" required pattern="[a-z,A-Z]{1,}">
+                    <span style="color: red" ng-show="regform.name.$error.required">Name is required</span>
+                    <span style="color: red;" ng-show="regform.name.$error.pattern">Name is invalid</span></td>
+                    
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td><label for="password">REGISTERATION Number :</label><span style="color: red">*</span></td>
+                    <td><input type="password" ng-model="Password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        <span style="color: red" ng-show="regform.password.$error.required">REGISTERATION Number is required</span>
+                        <span style="color: red;" ng-show="regform.password.$error.pattern">REGISTERATION Number is invalid</span></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><label for="year">YEAR:</label><span style="color: red">*</span></td>
+                    <td><select ng-model="year" id="state" name="year" required> 
+                        
+                        <option>UG I year</option> 
+                        <option>UG II year</option> 
+                        <option>UG III year</option> 
+                        <option>UG IV year</option>
+                        <option>PG I year</option>
+                        <option>PG II YEAR</option>
+                        
+                        <span style="color: red" ng-show="regform.year.$error.required">DEPARTMENT is required</span></td>
+                        
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><label for="number">Mobile Number : </label><span style="color: red">*</span></td>
+                    <td><input type="number" ng-model="number" id="number" name="number" required >
+                        <span style="color: red" ng-show="regform.number.$error.required">Number is required</span>
+                        <span style="color: red;" ng-show="regform.number.$error.pattern">Mobile number is invalid</span></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email : </label><span style="color: red">*</span></td>
+                    <td><input type="email" ng-model="email" id="email" name="email" required>
+                        <span style="color: red" ng-show="regform.email.$error.required">Email is required</span>
+                        <span style="color: red" ng-show="regform.email.$error.email">Email Format</span></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><label for="gender">Gender :</label><span style="color: red">*</span></td>
+                    <td><input type="radio" ng-model = 'gender' name="gender" value="male" id="gender" required>Male 
+                        <input type="radio" ng-model = 'gender' name="gender" value="female" id="gender" required>Female
+                        <span style="color: red" ng-show="regform.gender.$error.required">Gender is required</span></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td><label for="state">DEPARTMENT:</label><span style="color: red">*</span></td>
+                    <td><select ng-model="state" id="state" name="state" required> 
+                        
+                        <option>CSE</option> 
+                        <option>EEE</option> 
+                        <option>MECH</option> 
+                        <option>CIVIL</option>
+                        <option>ECE</option>
+                        <option>AERO</option>
+                        <option>AEROSPACE</option>
+                        <option>ARTS AND SCIENCE</option>
+                        <span style="color: red" ng-show="regform.state.$error.required">DEPARTMENT is required</span></td>
+                </tr>
+
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" ng-disabled=" regform.name.$error.required || regform.password.$error.required || regform.age.$error.required ||
+                         regform.number.$error.required || regform.email.$error.required || regform.gender.$error.required || regform.state.$error.required" ></td>
+                </tr>
+
+                
+
+            </table>
+
+             
+        </form> 
+    </body>
+</html>
